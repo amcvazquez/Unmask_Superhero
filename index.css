@@ -1,0 +1,9 @@
+h1 {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 32px;
+}
+ .center {
+  display: flex;
+  justify-content: center;
+}
