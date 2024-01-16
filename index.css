@@ -7,3 +7,38 @@ h1 {
   display: flex;
   justify-content: center;
 }
+.image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    margin: 0%;
+    width: 200px;
+}
+.title {
+    text-align: center;
+    color: red;
+   font-weight: bolder;
+}
+.entered_letter_parent {
+    margin-top: 50px;
+}
+button {
+    margin: 15px;
+    padding: 15px;
+    color: blue;
+    background-color: red;
+}
+.hide {
+    display: none;
+} 
+.row {
+    display:flex; 
+}
+.column{
+    flex-direction: column;
+}
+ 
+.bold {
+    font-weight: bold;
+}
