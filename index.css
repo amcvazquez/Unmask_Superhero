@@ -42,3 +42,13 @@ button {
 .bold {
     font-weight: bold;
 }
+.button_wrapper{
+width: 50%;
+margin: auto;
+display: block;
+text-align: center;
+}
+.box_body{
+    width: 50%;
+    margin: auto;
+}
