@@ -22,6 +22,7 @@ h1 {
 }
 .entered_letter_parent {
     margin-top: 50px;
+    width: inherit;
 }
 button {
     margin: 15px;
@@ -41,14 +42,30 @@ button {
  
 .bold {
     font-weight: bold;
+    color: blue;
+    font-size: larger;
 }
 .button_wrapper{
-width: 50%;
 margin: auto;
 display: block;
 text-align: center;
 }
 .box_body{
-    width: 50%;
     margin: auto;
+}
+.navbar-item{
+    color: blue;
+    font-size: large;
+    font-weight: bold;
+    font-style: oblique;
+}
+.size{
+    font-size: larger;
+    color: blue;
+    font-weight: bolder;
+} 
+
+#wrong {
+    color:red; 
+    font-size: 26px;
 }

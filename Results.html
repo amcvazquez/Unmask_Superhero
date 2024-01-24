@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
-    <h1 class="title">Results</h1>
-    <section class="center column">
+    <h1 class="title">CONGRATULATIONS</h1>
+    <section class="center column hide">
       <div class="row center">
         <div class="bold">Spiderman</div>
         <div class="icon"></div>
@@ -27,11 +27,57 @@
         <div class="icon"></div>
       </div>
     </section>
-
-    <section class="center">
-      <video width="320" height="240" controls>
-        <source src="" type="video/mp4" />
-      </video>
-    </section>
+    <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
+      
+<section class="center"><div id="player"></div></section>
+      <script>
+        // 2. This code loads the IFrame Player API code asynchronously.
+        var tag = document.createElement('script');
+  
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+  
+        // 3. This function creates an <iframe> (and YouTube player)
+        //    after the API code downloads.
+        var player;
+        function onYouTubeIframeAPIReady() {
+          player = new YT.Player('player', {
+            height: '390',
+            width: '640',
+            videoId: 'aX9H5-i4Kek',
+            playerVars: {
+              'playsinline': 1
+            },
+            events: {
+              'onReady': onPlayerReady,
+              'onStateChange': onPlayerStateChange
+            }
+          });
+        }
+  
+        // 4. The API will call this function when the video player is ready.
+        function onPlayerReady(event) {
+          event.target.playVideo();
+        }
+  
+        // 5. The API calls this function when the player's state changes.
+        //    The function indicates that when playing a video (state=1),
+        //    the player should play for six seconds and then stop.
+        var done = false;
+        function onPlayerStateChange(event) {
+          if (event.data == YT.PlayerState.PLAYING && !done) {
+            setTimeout(stopVideo, 6000);
+            done = true;
+          }
+        }
+        function stopVideo() {
+          player.stopVideo();
+        }
+      </script>
+  
+    <div class="center">
+   <a href="index.html"> <button id="restart" class="center"> Play Agian </button> </a> </div>
+    <script src="./index.js"> </script>
   </body>
 </html>
